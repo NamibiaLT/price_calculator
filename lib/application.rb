@@ -16,6 +16,6 @@ class Application
   end
 
   def parsed_base_price_file
-    Json.parse(File.read(@base_price_file))
+    JSON.parse(File.read(@base_price_file))
   end
 end
