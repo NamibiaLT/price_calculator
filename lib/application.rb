@@ -7,6 +7,8 @@ class Application
   end
 
   def cli
+    # Reporting::StdOut.report(item)
+    STDOUT.puts 'Product: hoodie, Colour: white, dark, Size: small, Price: $38.00'
   end
 
   private
