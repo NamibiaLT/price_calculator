@@ -15,15 +15,6 @@ RSpec.describe 'Application' do
   end
 end
 
-RSpec.describe 'ProductParser' do
-  describe 'parse' do
-    it 'parses the base-price file' do
-      product_base_price = ProductParser.new(@filename)
-      expect(product_base_price.parse).to receive(base_price_file)
-    end
-  end
-end
-
 RSpec.describe 'BasePrice' do
   describe 'match?' do
     it 'matches the price to the selected product based on the options'
@@ -42,7 +33,7 @@ end
 
 RSpec.describe 'CartPrice' do
   describe 'calculate' do
-    it 'finds the total price of the cart based on the product option base price'
+    it 'finds the total price of the cart based on the base price for the porduct option'
       # TODO
     end
   end
