@@ -25,8 +25,25 @@ RSpec.describe 'ProductParser' do
 end
 
 RSpec.describe 'BasePrice' do
-  describe 'match' do
-    it 'matches the base price to the selected product option'
+  describe 'match?' do
+    it 'matches the price to the selected product based on the options'
     # TODO
+    end
+  end
+end
+
+RSpec.describe 'Product' do
+  describe 'match?' do
+    it 'finds the base prices for the product type' do
+      # TODO
+    end
+  end
+end
+
+RSpec.describe 'CartPrice' do
+  describe 'calculate' do
+    it 'finds the total price of the cart based on the product option base price'
+      # TODO
+    end
   end
 end
