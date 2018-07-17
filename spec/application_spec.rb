@@ -14,3 +14,19 @@ RSpec.describe 'Application' do
     end
   end
 end
+
+RSpec.describe 'ProductParser' do
+  describe 'parse' do
+    it 'parses the base-price file' do
+      product_base_price = ProductParser.new(@filename)
+      expect(product_base_price.parse).to receive(base_price_file)
+    end
+  end
+end
+
+RSpec.describe 'BasePrice' do
+  describe 'match' do
+    it 'matches the base price to the selected product option'
+    # TODO
+  end
+end
