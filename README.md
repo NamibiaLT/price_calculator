@@ -4,7 +4,7 @@
 This is a price calculator command line program, that takes two arguments a cart and a list of prices. The program outputs the total price (in cents) of items in your cart.
 
 ### Instructions
-Change into the price_calculator directory, then run ```bundle exec rspec``` in the command line. Further description about the functional requirements of this app can be found here: http://take-home-test.herokuapp.com/new-product-engineer
+Change into the price_calculator directory, then run ```bin/price_calculator_cli``` in the command line. Further description about the functional requirements of this app can be found here: http://take-home-test.herokuapp.com/new-product-engineer
 
 ### Ruby Installation
 *Note: I am using Ruby version ruby 2.4.1*
