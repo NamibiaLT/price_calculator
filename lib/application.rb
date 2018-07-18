@@ -11,6 +11,32 @@ class Application
   end
 end
 
+class Product
+  def initialize(product_type:, base_prices:)
+    @product_type = product_type
+    @base_prices = base_prices
+  end
+
+  def match?(product_type)
+    @product_type == product_type
+  end
+
+  def base_price_for(options)
+    @base_prices.find { |base_price| base_price.match?(options) }
+  end
+end
+
+class BasePrice
+  def initialize(options:, price:)
+    @options = options
+    @price = price
+  end
+
+  def match?(options)
+    # TODO
+  end
+end
+
 class ProductParser
   def initialize(filename)
     @filename = filename
