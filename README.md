@@ -1,9 +1,9 @@
-# Namibia Torres
+# Price Calculator App
 
 ### Description
 This is a price calculator command line program, that takes two arguments a cart and a list of prices. The program outputs the total price (in cents) of items in your cart.
 
-###Instructions
+### Instructions
 Change into the price_calculator directory, then run ```bundle exec rspec``` in the command line 
 
 ### Functional Requirements of the Price Calculator APP:
