@@ -14,8 +14,8 @@ RSpec.describe 'ProductParser' do
       expect(products[0].product_type).to eq('hoodie') 
     end    
     
-    it 'sets the base-price on the product' do
-      expect(products[0].base_prices[0]).to eq(3800)
+    it 'sets the base-price on a product' do
+      expect(products[0].base_prices[0].price).to eq(3800)
     end
   end
 end
