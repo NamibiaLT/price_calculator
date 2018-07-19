@@ -1,5 +1,5 @@
 require 'rspec'
-require 'application'
+require 'product_parser'
 
 RSpec.describe 'ProductParser' do
   describe 'parse' do
@@ -15,7 +15,7 @@ RSpec.describe 'ProductParser' do
     end    
     
     it 'sets the base-price on the product' do
-      expect(products[0].base_prices).to eq(3800)
+      expect(products[0].base_prices[0]).to eq(3800)
     end
   end
 end

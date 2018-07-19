@@ -14,27 +14,3 @@ RSpec.describe 'Application' do
     end
   end
 end
-
-RSpec.describe 'BasePrice' do
-  describe 'match?' do
-    it 'matches the price to the selected product based on the options' do
-    # TODO
-    end
-  end
-end
-
-RSpec.describe 'Product' do
-  describe 'match?' do
-    it 'finds the base prices for the product type' do
-      # TODO
-    end
-  end
-end
-
-RSpec.describe 'CartPrice' do
-  describe 'calculate' do
-    it 'finds the total price of the cart based on the base price for the porduct option' do
-      # TODO
-    end
-  end
-end
