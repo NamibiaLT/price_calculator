@@ -17,4 +17,10 @@ RSpec.describe 'CartItem' do
       expect(item.item_markup_for(option)).to be(item_details.markup)
     end
   end
+
+  describe 'item_quantity_for' do
+    it 'finds the item quantity when given options for an item' do
+      expect(item.item_quantity_for(option)).to be(item_details.quantity)
+    end
+  end
 end
