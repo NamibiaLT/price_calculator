@@ -2,9 +2,9 @@ require 'rspec'
 require 'cart_price'
 
 RSpec.describe 'CartPrice' do
-  describe 'calculate' do
-    it 'finds the total price of the cart based on the base price for the porduct option' do
-      # TODO
-    end
+  describe 'total' do
+    # it 'finds the total price of the cart' do
+    #   expect(cart.total).to eq()
+    # end
   end
 end
