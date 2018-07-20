@@ -9,7 +9,7 @@ class CartParser
     JSON.parse(File.read(@cart_file))
       .group_by {|hash| hash['product-type'] }
       .map do |product_type, product_hashes|
-        Item.new(product_type: product_type, details: details(product_hashes))
+        CartItem.new(product_type: product_type, details: details(product_hashes))
       end
   end
 
