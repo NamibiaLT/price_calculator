@@ -1,5 +1,4 @@
 require 'json'
-require 'pry'
 
 class Product
   attr_reader :product_type, :base_prices
@@ -14,6 +13,6 @@ class Product
   end
 
   def base_price_for(options)
-    @base_prices.find { |base_price| base_price.match?(options) }
+    @base_prices.price { |base_price| base_price.match?(options) }
   end
 end
