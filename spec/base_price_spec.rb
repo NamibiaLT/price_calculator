@@ -1,7 +1,6 @@
 require 'rspec'
 require 'product'
 require 'base_price'
-require 'pry'
 
 RSpec.describe 'BasePrice' do
   let(:option) { { "size": ["large"], "colour": ["white"] } }
