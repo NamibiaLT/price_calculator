@@ -1,12 +1,12 @@
 require 'json'
 
 class ProductParser
-  def initialize(filename)
-    @filename = filename
+  def initialize(base_price_file)
+    @base_price_file = base_price_file
   end
 
   def parse
-    JSON.parse(File.read('./example-data/base_prices.json'))
+    JSON.parse(File.read(@base_price_file))
       .group_by {|hash| hash['product-type'] }
       .map do |product_type, product_hashes|
         Product.new(product_type: product_type, base_prices: base_prices(product_hashes))

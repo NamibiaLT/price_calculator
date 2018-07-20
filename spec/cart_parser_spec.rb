@@ -1,8 +1,9 @@
 require 'rspec'
+require 'json'
 require 'cart_parser'
 
 RSpec.describe 'CartParser' do
-  let(:cart_parser) { CartParser.new(@filename) }
+  let(:cart_parser) { CartParser.new('./example-data/cart_4560.json') }
   let(:item) { cart_parser.parse }
   let(:option) { 
     {

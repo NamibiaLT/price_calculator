@@ -1,9 +1,10 @@
 require 'rspec'
 require 'product_parser'
+require 'json'
 
 RSpec.describe 'ProductParser' do
   describe 'parse' do
-    let(:product_parser) { ProductParser.new(@filename) }
+    let(:product_parser) { ProductParser.new('./example-data/base_prices.json') }
     let(:products) { product_parser.parse }
 
     it 'returns one product' do
