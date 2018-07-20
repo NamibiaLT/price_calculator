@@ -13,8 +13,8 @@ RSpec.describe 'CartItem' do
   end
 
   describe 'item_details_for' do
-    it 'finds the item details when given options for an item' do
-      expect(item.item_details_for(option)).to be(item_details)
+    it 'finds the item markup when given options for an item' do
+      expect(item.item_markup_for(option)).to be(item_details.markup)
     end
   end
 end
