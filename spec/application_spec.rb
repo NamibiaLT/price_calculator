@@ -9,7 +9,7 @@ RSpec.describe 'Application' do
 
     it 'should print out the base price for one item' do
       allow(STDOUT).to receive(:puts)
-      expect(STDOUT).to receive(:puts).with('Product: hoodie, Colour: white, dark, Size: small, Price: $38.00')
+      expect(STDOUT).to receive(:puts).with('hoodie total: 4560 cents')
       application.cli
     end
   end

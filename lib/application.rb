@@ -7,6 +7,8 @@ class Application
   end
 
   def cli
-    STDOUT.puts 'Product: hoodie, Colour: white, dark, Size: small, Price: $38.00'
+    cart_item.total.each do |item|
+      STDOUT.puts "#{cart_item.product_type} total: #{cart.total} cents \n"
+    end
   end
 end
