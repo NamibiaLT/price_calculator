@@ -1,10 +1,10 @@
 # Price Calculator App
 
 ### Description
-This is a price calculator command line program, that takes two arguments a cart and a list of prices. The program outputs the total price (in cents) of items in your cart.
+This is a price calculator command line program, that takes two arguments: a cart file and a list of prices file. The program outputs the total price (in cents) of items in your cart.
 
 ### Instructions
-Change into the price_calculator directory, then run ```bin/price_calculator_cli /path/to/base_prices/file /path/to/cart/file``` in the command line. Further description about the functional requirements of this app can be found here: http://take-home-test.herokuapp.com/new-product-engineer
+Change into the price_calculator directory, then run ```bin/price_calculator_cli /path/to/base_prices/file /path/to/cart/file``` in the command line. For example, you might type something like this in your command line: ```bin/price_calculator_cli ./example-data/base_prices.js ./example-data/cart_4560.json```. Further description about the functional requirements of this app can be found here: http://take-home-test.herokuapp.com/new-product-engineer
 
 ### Ruby Installation
 *Note: I am using Ruby version ruby 2.4.1*
