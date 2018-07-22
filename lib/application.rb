@@ -7,8 +7,8 @@ class Application
   end
 
   def cli
-    cart_item.total.each do |item|
-      STDOUT.puts "#The total for all the items in your cart is: #{cart.total} cents \n"
+    cart_items.total.each do |item|
+      STDOUT.puts "The total for all the items in your cart is: #{cart.total} cents \n"
     end
   end
 end
