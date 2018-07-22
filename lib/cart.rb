@@ -1,5 +1,5 @@
 require 'json'
-require 'cart_item'
+require 'cart_items'
 require 'base_price'
 
 class Cart
