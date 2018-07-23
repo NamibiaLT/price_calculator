@@ -1,5 +1,3 @@
-require 'json'
-
 class BasePrice
   attr_reader :price, :options
   
