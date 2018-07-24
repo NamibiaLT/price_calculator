@@ -5,7 +5,7 @@ require 'base_price'
 RSpec.describe 'Product' do
   let(:option) { { "size": ["large"], "colour": ["white"] } }
   let(:product_base_price) { BasePrice.new(price: 3848, options: option) }
-  let(:product) { Product.new(product_type: 'hoodie', base_prices: product_base_price) }
+  let(:product) { Product.new(product_type: 'hoodie', base_prices: [product_base_price]) }
   let(:no_product) { Product.new(product_type:nil, base_prices: nil) }
 
   context 'when a product type is given' do
