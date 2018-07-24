@@ -17,7 +17,7 @@ class CartItems
   end
 
   def item_total(markup, quantity)
-    total = (price_lookup(product_type, options) + (additional_markup) * @quantity) 
+    total = ((price_lookup(product_type, options) + additional_markup) * @quantity) 
     total.to_i
   end
 
