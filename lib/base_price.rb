@@ -7,6 +7,6 @@ class BasePrice
   end
 
   def match?(options)
-    @options == options
+    options.all? { |values| @options.values }
   end
 end
