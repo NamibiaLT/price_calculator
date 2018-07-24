@@ -13,6 +13,6 @@ class Product
   end
 
   def base_price_for(options)
-    @base_prices.find { |base_price| base_price.match?(options) }
+    @base_prices.find { |base_price| base_price.match?(options) }.price
   end
 end
