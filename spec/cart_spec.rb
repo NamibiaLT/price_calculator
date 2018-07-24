@@ -2,22 +2,15 @@ require 'rspec'
 require 'cart_items'
 require 'cart'
 require 'base_price'
-require 'json'
+require 'product'
 
 RSpec.describe 'Cart' do
   let(:option) { {"size": "small", "colour": "white", "print-location": "front"} }
-  let(:item_details) { Cart.new(options: option, markup: 20, quantity: 1) }
-  let(:item) { CartItems.new(product_type: 'hoodie', details: item_details)}
+  let(:item) { CartItems.new(product_type: 'hoodie', options: option, markup: 20, quantity: 1)}
 
-  describe 'cart_item_to_product' do
-    it 'matches the cart item to the product on file' do
-      expect(item.cart_item_to_product).to be true
-    end
-  end
-
-  describe 'total' do
+  describe 'cart_total' do
     it 'finds the total price of the cart' do
-      expect(item.total).to eq(4560)
+      expect(item.cart_total).to eq(4560)
     end
   end
 end
