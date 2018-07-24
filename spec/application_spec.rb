@@ -8,6 +8,7 @@ RSpec.describe 'Application' do
     let(:application) { Application.new(cart_file, base_price_file) }
 
     it 'should print out the base price for one item' do
+      pending
       allow(STDOUT).to receive(:puts)
       expect(STDOUT).to receive(:puts).with('hoodie total: 4560 cents')
       application.cli
