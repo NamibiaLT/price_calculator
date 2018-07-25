@@ -1,8 +1,7 @@
 require './lib/cart_parser'
-# require './lib/product_parser'
+require './lib/product_parser'
 require './lib/cart_parser'
 require 'json'
-require 'pry'
 
 class Application
   def initialize(cart_file, base_price_file)
