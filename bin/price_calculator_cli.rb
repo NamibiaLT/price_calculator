@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require './lib/application.rb'
 
-$:.unshift File.join(__FILE__, '..', '..', 'lib')
+$:.unshift File.join(__FILE__, '..', '..', 'lib', 'example-data')
 
 base_prices_file = ARGV[0]
 cart_file = ARGV[1]
@@ -11,6 +11,6 @@ if base_prices_file.nil? || cart_file.nil?
   exit 2
 end
 
-require 'application'
+require './lib/application'
 
 Application.new(base_prices_file, cart_file).cli

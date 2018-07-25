@@ -1,6 +1,8 @@
-require 'cart_parser'
-require 'product_parser'
+require './lib/cart_parser'
+# require './lib/product_parser'
+require './lib/cart_parser'
 require 'json'
+require 'pry'
 
 class Application
   def initialize(cart_file, base_price_file)
@@ -9,16 +11,16 @@ class Application
   end
 
   def cli
-    STDOUT.puts "Your cart total is: #{parsed_cart.cart_total} cents"
+    STDOUT.puts "Your cart total is: #{cart.cart_total} cents"
   end
 
   private
 
-  def parsed_cart
-    CartParser.new(@cart_file).parse
+  def cart
+    CartParser.new(@cart_file, base_prices).parse
   end
 
-  def parsed_base_prices
+  def base_prices
     ProductParser.new(@base_price_file).parse
   end
 end
