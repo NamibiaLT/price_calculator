@@ -4,11 +4,10 @@ require 'cart_parser'
 
 RSpec.describe 'CartParser' do
   let(:cart_parser) { CartParser.new('./example-data/cart_4560.json') }
-  let(:item) { cart_parser.parse }
-
+  let(:options) { {"size"=>"small", "colour"=>"white", "print-location"=>"front"} }
   describe 'parse' do
-    it 'sets the product type for an item' do
-      expect(item[0].product_type).to eq('hoodie')
+    it 'creates a cart with items' do
+      expect(cart_parser.parse).to eq()
     end
   end
 end

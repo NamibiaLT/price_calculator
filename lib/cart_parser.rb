@@ -6,7 +6,7 @@ class CartParser
   end
 
   def parse
-    JSON.parse(File.read(@cart_file))
+    cart_items = JSON.parse(File.read(@cart_file))
       .map do |product_hash|
         CartItems.new(
           product_type: product_hash['product-type'],
@@ -15,5 +15,6 @@ class CartParser
           quantity: product_hash['quantity']
         )
       end
+    Cart.new(cart_items)
   end
 end
