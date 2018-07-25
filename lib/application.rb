@@ -17,4 +17,8 @@ class Application
   def parsed_cart
     CartParser.new(@cart_file).parse
   end
+
+  def parsed_base_prices
+    ProductParser.new(@base_price_file).parse
+  end
 end
