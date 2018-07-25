@@ -8,7 +8,7 @@ class CartParser
   def parse
     cart_items = JSON.parse(File.read(@cart_file))
       .map do |product_hash|
-        CartItems.new(
+        CartItem.new(
           product_type: product_hash['product-type'],
           options: product_hash['options'],
           markup: product_hash['artist-markup'],
