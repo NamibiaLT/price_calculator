@@ -7,7 +7,8 @@ RSpec.describe 'CartParser' do
   let(:options) { {"size"=>"small", "colour"=>"white", "print-location"=>"front"} }
   describe 'parse' do
     it 'creates a cart with items' do
-      expect(cart_parser.parse).to eq()
+      cart = cart_parser.parse
+      expect(cart).to be_a(Cart)
     end
   end
 end
