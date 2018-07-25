@@ -3,7 +3,7 @@ require 'cart_item'
 require 'cart'
 
 RSpec.describe 'Cart' do
-  let(:option1) { {"size": "small", "colour": "white", "print-location": "front"} }
+  let(:option1) { { 'size': 'small', 'colour': 'white', 'print-location': 'front' } }
   let(:cart_item1) { CartItem.new(product_type: 'hoodie', options: option1, markup: 20, quantity: 1) }
   let(:cart_item2) { CartItem.new(product_type: 'hoodie', options: option1, markup: 10, quantity: 2) }
   let(:cart) { Cart.new([cart_item1]) }

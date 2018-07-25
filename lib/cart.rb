@@ -1,6 +1,6 @@
 require 'cart_item'
 
-class Cart 
+class Cart
   def initialize(cart_items)
     @cart_items = cart_items
   end

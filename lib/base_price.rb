@@ -1,6 +1,6 @@
 class BasePrice
   attr_reader :price, :options
-  
+
   def initialize(options:, price:)
     @options = options
     @price = price

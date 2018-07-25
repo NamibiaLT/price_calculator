@@ -2,7 +2,7 @@ require 'rspec'
 require 'base_price'
 
 RSpec.describe 'BasePrice' do
-  let(:option) { { "size": ["large"], "colour": ["white"] } }
+  let(:option) { { 'size': ['large'], 'colour': ['white'] } }
   let(:product_base_price) { BasePrice.new(price: 3848, options: option) }
 
   describe 'match?' do

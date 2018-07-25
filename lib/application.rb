@@ -1,3 +1,5 @@
+require 'cart_parser'
+require 'product_parser'
 require 'json'
 
 class Application
@@ -7,8 +9,12 @@ class Application
   end
 
   def cli
-    cart_items.total.each do |item|
-      STDOUT.puts "The total for all the items in your cart is: #{cart.total} cents \n"
-    end
+    STDOUT.puts "Your cart total is: #{parsed_cart.cart_total} cents"
+  end
+
+  private
+
+  def parsed_cart
+    CartParser.new(@cart_file).parse
   end
 end

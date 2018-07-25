@@ -7,10 +7,10 @@ class ProductParser
 
   def parse
     JSON.parse(File.read(@base_price_file))
-      .group_by {|hash| hash['product-type'] }
-      .map do |product_type, product_hashes|
-        Product.new(product_type: product_type, base_prices: base_prices(product_hashes))
-      end
+        .group_by { |hash| hash['product-type'] }
+        .map do |product_type, product_hashes|
+          Product.new(product_type: product_type, base_prices: base_prices(product_hashes))
+        end
   end
 
   private
