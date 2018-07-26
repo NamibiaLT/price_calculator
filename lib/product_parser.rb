@@ -1,4 +1,6 @@
 require 'json'
+require_relative 'product'
+require_relative 'base_price'
 
 class ProductParser
   def initialize(base_price_file)

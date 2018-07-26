@@ -1,4 +1,6 @@
 require 'json'
+require_relative 'cart_item'
+require_relative 'cart'
 
 class CartParser
   def initialize(cart_file, base_prices)

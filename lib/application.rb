@@ -1,6 +1,6 @@
-require './lib/cart_parser'
 require './lib/product_parser'
 require './lib/cart_parser'
+# require './lib/cart'
 require 'json'
 
 class Application

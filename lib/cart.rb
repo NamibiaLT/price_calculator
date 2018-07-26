@@ -1,4 +1,4 @@
-require 'cart_item'
+require_relative 'cart_item'
 
 class Cart
   def initialize(cart_items)
