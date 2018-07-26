@@ -1,17 +1,18 @@
 require 'json'
 
 class CartItem
-  attr_reader :product_type, :options, :markup, :quantity
+  attr_reader :product_type, :options, :markup, :quantity, :base_prices
 
-  def initialize(product_type:, options:, markup:, quantity:)
+  def initialize(product_type:, options:, markup:, quantity:, base_prices:)
     @product_type = product_type
     @options = options
     @markup = markup
     @quantity = quantity
+    @base_prices = base_prices
   end
 
   def price_lookup
-    product = parsed_base_prices_file.find { |product| product.match?(product_type) }
+    product = @base_prices.find { |product| product.match?(product_type) }
     product.base_price_for(options)
   end
 
@@ -28,9 +29,5 @@ class CartItem
 
   def artist_markup_in_cents
     @markup / 100.to_f
-  end
-
-  def parsed_base_prices_file
-    ProductParser.new('./example-data/base_prices.json').parse
   end
 end

@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
-require './lib/application.rb'
 
-$:.unshift File.join(__FILE__, '..', '..', 'lib', 'example-data')
+$:.unshift File.join(__FILE__, '..', '..', './example-data/base_prices.json', 'lib')
 
 base_prices_file = ARGV[0]
 cart_file = ARGV[1]
@@ -13,4 +12,4 @@ end
 
 require './lib/application'
 
-Application.new(base_prices_file, cart_file).cli
+Application.new(cart_file, base_prices_file).cli

@@ -1,8 +1,9 @@
 require 'cart_item'
 
 RSpec.describe 'CartItem' do
+  let(:parsed_base_prices) { ProductParser.new('./example-data/base_prices.json').parse }
   let(:option) { { 'size': 'small', 'colour': 'white' } }
-  let(:item) { CartItem.new(product_type: 'hoodie', options: option, markup: 20, quantity: 1) }
+  let(:item) { CartItem.new(product_type: 'hoodie', options: option, markup: 20, quantity: 1, base_prices: parsed_base_prices) }
 
   describe 'price_lookup' do
     it 'looks up the base price of an item' do
